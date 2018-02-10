@@ -92,6 +92,35 @@ int main()
 		ArrayBag<char> bag2;
 		bagInput(bag2); //get inputs for bag 2
 
+		//result bag
+		ArrayBag<char> resultBag;
+		
+		//bagUnion
+		cout<<endl;
+		cout<<"Bag Union Test:"<<endl;
+		cout<<"---------------"<<endl;
+		resultBag = bag1.bagUnion(bag2);
+		displayBag(resultBag);
+		
+		//Clear the result bag
+		resultBag.clear();
+
+		//bagIntersection
+		cout<<endl;
+		cout<<"Bag Intersection Test:"<<endl;
+		cout<<"----------------------"<<endl;
+		resultBag = bag1.bagIntersection(bag2);
+		displayBag(resultBag);
+		
+		//Clear the result bag
+		resultBag.clear();
+		
+		//bagDifference
+		cout<<"Bad Difference Test:"<<endl;
+		cout<<"--------------------"<<endl;
+		resultBag = bag1.bagDifference(bag2);
+		displayBag(resultBag);
+		
    		cout << "Inputs Completed!" << endl;
 	}
 	else if(choice == "C" || choice == "c")

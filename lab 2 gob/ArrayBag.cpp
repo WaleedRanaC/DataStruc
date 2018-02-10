@@ -133,8 +133,9 @@ ArrayBag<ItemType> ArrayBag<ItemType>::bagUnion(const ArrayBag<ItemType> &aBag)
 	{
 		result.add(items[i]);
 	}
-	numItems=getCurrentSize();
-	for (int i=0; i<numItems; i++)
+	int numItems2=0;
+	numItems2=aBag.getCurrentSize();
+	for (int i=0; i<numItems2; i++)
 	{
 			result.add(aBag.items[i]);
 	}
