@@ -8,7 +8,6 @@
  *  Grader name:
  *  Number of slip days I am using:
  */
-
 import java.util.Iterator;
 
 public class LinkedList<E> implements IList<E> {
@@ -16,7 +15,12 @@ public class LinkedList<E> implements IList<E> {
     // You decide what instance variables to use.
     // Must adhere to assignment requirements. No ArrayLists or Java LinkedLists.
 	DoubleListNode<E> head;
-
+	DoubleListNode<E> end;
+	E headData;
+	E endData;
+	
+	int size;
+	
 
     /**
      * add item to the front of the list.
@@ -32,7 +36,7 @@ public class LinkedList<E> implements IList<E> {
 	}
 	
 	//creating a new front of the list
-	DoubleListNode<E> firstNode = new DoubleListNode<E>(null, item, null);
+	DoubleListNode<E> firstNode = new DoubleListNode<E>(end.getPrev(), item, null);
 	
 	//setting the front of the list to the head
 	firstNode.setNext(head);
@@ -40,9 +44,13 @@ public class LinkedList<E> implements IList<E> {
 	//setting the head to new first node
 	head = firstNode;
 	
+	//setting the headData
+	headData = head.getData();
+	
 
 
     }
+
 
 
     /**
@@ -75,5 +83,75 @@ public class LinkedList<E> implements IList<E> {
     public E removeLast(){
         return null;
     }
+    
+    
+    
+    //IList implementation files
+    //got to make same as implement
+    public int size() {
+    	 return 0;
+    }
+    
+    public void add(E item){
+    	
+    }
+    
+   
+    public E remove(int item) {
+    	
+    	return null;
+    }
+    
+    public boolean remove(E item) {
+    	
+    	return true;
+    }
+    
+    public IList<E> getSubList(int start, int stop){
+    //int listSize = start - stop ;
+     //IList<E> newList = new IList<E>();
+     
+    	return null;
+    }
+    
+    public void makeEmpty() {
+    	
+    }
+    
+    public E get(int pos)
+    {
+    	return null;
+    }
+    
+    public void insert(int pos, E item) {
+    	
+    }
+    
+    public int indexOf(E item){
+    	
+    	return 0;
+    }
+    
+    public int indexOf(E item, int pos){
+    	
+    	 return 0;
+    }
+    
+    public Iterator<E> iterator(){
+    	
+    	return null;
+    }
+    
+    public void removeRange(int start, int stop) {
+    	
+    }
+    
+    public E set(int pos, E item) {
+    	return null;
+    }
+ 
+    
+    
+ 
 
 }
